@@ -1,21 +1,31 @@
 <?php
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-    $to = 'hi@jvsh.fun';
-    $subject = 'New message from your website';
-    $headers = "From: $email" . "\r\n" .
-               "Reply-To: $email" . "\r\n" .
-               'X-Mailer: PHP/' . phpversion();
-
-    $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nMessage:\n$message";
-
-    if(mail($to, $subject, $body, $headers)) {
-        echo 'Message sent successfully';
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the form fields
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+    
+    // Set up the recipient email address
+    $to = "hi@jvsh.fun";
+    
+    // Set up the email subject
+    $subject = "Message from Website";
+    
+    // Set up the email message
+    $body = "Name: " . $name . "\n";
+    $body .= "Email: " . $email . "\n";
+    $body .= "Message: " . $message;
+    
+    // Set up the email headers
+    $headers = "From: " . $email . "\r\n";
+    $headers .= "Reply-To: " . $email . "\r\n";
+    
+    // Send the email
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Your message has been sent successfully!";
     } else {
-        echo 'Message could not be sent';
+        echo "Sorry, there was an error sending your message.";
     }
 }
 ?>
