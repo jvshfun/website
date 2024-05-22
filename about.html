@@ -1,176 +1,161 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>who is josh? - jsh's music taste </title>
-<style>
-  @font-face {
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>who is josh? - jsh's music taste</title>
+  <style>
+   @font-face {
+      font-family: 'Ostrich Sans';
+      src: url('fonts/ostrich-sans-black.eot');
+      src: url('fonts/ostrich-sans-black.eot?#iefix') format('embedded-opentype'),
+           url('fonts/ostrich-sans-black.woff') format('woff'),
+           url('fonts/ostrich-sans-black.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+  }
+  body::after {
+    content: "";
+    background: url("images/mesh.png");
+    position: fixed; 
+    top: -8px; 
+    left: -8px; 
+    right: -8px; 
+    bottom: -8px; 
+    z-index: -1; 
+    
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    
+    height: calc(100% + 16px); 
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1 {
     font-family: 'Ostrich Sans';
-    src:url('fonts/ostrich-sans-black.woff') format('woff'),
-        url('fonts/ostrich-sans-black.ttf') format('svg'),
-        url('fonts/ostrich-sans-black.eot'),
-        url('fonts/ostrich-sans-black.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-      }
-      @font-face {
-    font-family: 'Cabinet Grotesk Black';
-    src:url('fonts/cabinetgrotesk-black.woff') format('woff'),
-        url('fonts/cabinetgrotesk-black.ttf') format('svg'),
-        url('fonts/cabinetgrotesk-black.woff2') format('woff2'),
-        url('fonts/cabinetgrotesk-black.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-      }
-    @font-face {
-    font-family: 'Cabinet Grotesk Medium';
-    src:url('fonts/cabinetgrotesk-medium.woff') format('woff'),
-        url('fonts/cabinetgrotesk-medium.ttf') format('svg'),
-        url('fonts/cabinetgrotesk-medium.woff2') format('woff2'),
-        url('fonts/cabinetgrotesk-medium.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-      }
-body::after {
-  content: "";
-  background: url("images/mesh.png");
-  position: fixed; /* or absolute */
-  top: -8px; /* equal to the blur radius */
-  left: -8px; /* equal to the blur radius */
-  right: -8px; /* equal to the blur radius */
-  bottom: -8px; /* equal to the blur radius */
-  z-index: -1; /* Keep the background behind the content */
+    font-size: 100px;
+    color: white;
+    text-align: center;
+  }
   
-  /* Add the blur effect */
-  filter: blur(10px);
-  -webkit-filter: blur(10px);
+  h2 {
+    font-family: 'Montserrat';
+    font-weight: 800;
+    font-size: 35px;
+    color: black;
+    text-align: center;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-weight: 800;
+    font-size: 20px;
+  }
   
-  /* Full height */
-  height: calc(100% + 16px); /* add twice the blur radius */
-  
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-h1 {
-  font-family: 'Ostrich Sans';
-  font-size: 100px;
-  color: white;
- text-align: center;
-}
-
-h2 {
-  font-family: 'Cabinet Grotesk Black';
-  font-size: 35px;
-  color: black;
-  text-align: center;
-}
-p {
-  font-family: 'Cabinet Grotesk Black';
-  font-size: 20px;
-}
-
-ul {
-                font-family: 'Cabinet Grotesk Medium';
-                font-size: 25px;
-                list-style-type: none;
-                margin: 0;
-                padding: 0px 680px;
-                overflow: hidden;
-                background-color: #333;
-               }
-               
-               li {
-                 float: left;
-                 font-family: 'Cabinet Grotesk Medium';
-                 font-size: 20px;
-               }
-               
-               li a {
-                 display: block;
-                 color: white;
-                 text-align: center;
-                 padding: 14px 16px;
-                 text-decoration: none;
-               }
-               
-               li a:hover {
-                 background-color: #111;
-               }
-               
-               * {
-                   box-sizing: border-box;		
-                   }
-               
-               
-                   .column {
-                   float: left;
-                   width: 33.3%;
-                   padding: 10px;
-                       }
-               
-               
-                   .row:after {
-                   content: "";
-                   display: table;
-                   clear: both;
-                   }
-                   
-                   
-                   @media screen and (max-width: 900px) {
-                   .column  {
-                   width: 50%;
-                   }
-                   }
-               
-               
-                   @media screen and (max-width: 600px) {
-                   .column  {
-                   width: 100%;
-                   }
-                       }
-
-    footer {
-      text-align: center;
+  ul {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 25px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 680px;
+    overflow: hidden;
+    background-color: #333;
+  }
+                 
+  li {
+    float: left;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+  }
+                 
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+                 
+  li a:hover {
+    background-color: #111;
+  }
+                 
+  * {
+    box-sizing: border-box;		
+  }
+                 
+  .column {
+    float: left;
+    width: 33.3%;
+    padding: 10px;
+  }
+                 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+                     
+  @media screen and (max-width: 900px) {
+    .column  {
+      width: 50%;
     }
-</style>
-</head>
-<body>
-
-<h1>Josh's Music Taste </h1>
-<ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="music.html">Music</a></li>
-  <li><a href="gallery.html">Gallery</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
-
-<h2 style="font-size: 35px; text-align: left; margin-bottom: auto;">Who is Josh? </h1>
-<p style="font-family: 'Cabinet Grotesk Medium';"> I am a 17 year old living in Wales who loves music. <br>  I listen to mostly pop music all throughout my day as it helps me concentrate on whatever I am doing like working or just gaming! <br> I've been a lover of technology since I was little and has grown ever since.
-  <br>
-<img src="images/joshdgnstran.png" alt="Josh Designs" style="width: 200px; height: 200px; float: left;"> <br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br><br>
-<p style="font-family: 'Cabinet Grotesk Medium'; text-align: left; padding-top: 2px;"> I actually do graphic design! I make designs for all sorts of people from Content Creators to Business Owners. <br> Here are some examples: </p>
-<video width="500" height="500" controls>
-  <source src="videos/render1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-<video width="500" height="500" controls>
-  <source src="videos/render2.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-<br>&nbsp; <br> &nbsp;<br> &nbsp;<br>&nbsp; <br> <br> <br> <br> <br> <br> <br> <br> <br>
-<footer>
-  <p style="font-family: 'Cabinet Grotesk Black';">2024 jsh's music taste <br>
-    <br>
-  <a style="font-family: 'Cabinet Grotesk Medium'; text-decoration: none; color: black;" href="index.html">Home </a><br>
-  <a style="font-family: 'Cabinet Grotesk Medium'; text-decoration: none; color: black;" href="about.html">About </a><br>
-  <a style="font-family: 'Cabinet Grotesk Medium'; text-decoration: none; color: black;" href="music.html">Music </a><br>
-  <a style="font-family: 'Cabinet Grotesk Medium'; text-decoration: none; color: black;" href="gallery.html">Gallery </a><br>
-  <a style="font-family: 'Cabinet Grotesk Medium'; text-decoration: none; color: black;" href="contact.html">Contact </a></p>
-</footer>
-</body>
+  }
+                 
+  @media screen and (max-width: 600px) {
+    .column  {
+      width: 100%;
+    }
+  }
+  
+  footer {
+    text-align: center;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <h1>Josh's Music Taste</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  
+  <h2 style="font-size: 35px; text-align: left; margin-bottom: auto;">Who is Josh?</h2>
+  <p style="font-family: 'Montserrat'; font-weight: 500;">I am a 17 year old living in Wales who loves music. <br> I listen to mostly pop music all throughout my day as it helps me concentrate on whatever I am doing like working or just gaming! <br> I've been a lover of technology since I was little and has grown ever since.</p>
+  <img src="images/joshdgnstran.png" alt="Josh Designs" style="width: 200px; height: 200px; float: left;">
+  <br>&nbsp; <br>&nbsp; <br>&nbsp; <br>&nbsp; <br>&nbsp; <br>&nbsp; <br>&nbsp; <br>&nbsp; <br> <br> <br>
+  <p style="font-family: 'Montserrat'; font-weight: 500; text-align: left; padding-top: 2px;">I actually do graphic design! I make designs for all sorts of people from Content Creators to Business Owners. <br> Here are some examples:</p>
+  <video width="500" height="500" controls>
+    <source src="videos/render1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video width="500" height="500" controls>
+    <source src="videos/render2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <br>&nbsp; <br>&nbsp; <br> <br>
+  <footer>
+    <p style="font-family: 'Montserrat'; font-weight: 800;">2024 jsh's music taste <br>
+      <br>
+    <a style="font-family: 'Montserrat'; font-weight: 500; text-decoration: none; color: black;" href="index.html">Home </a><br>
+    <a style="font-family: 'Montserrat'; font-weight: 500; text-decoration: none; color: black;" href="about.html">About </a><br>
+    <a style="font-family: 'Montserrat'; font-weight: 500; text-decoration: none; color: black;" href="music.html">Music </a><br>
+    <a style="font-family: 'Montserrat'; font-weight: 500; text-decoration: none; color: black;" href="gallery.html">Gallery </a><br>
+    <a style="font-family: 'Montserrat'; font-weight: 500; text-decoration: none; color: black;" href="contact.html">Contact </a></p>
+    <p style="font-family: 'Montserrat'; font-weight: 500; font-size: 15px;">Made with &#x2764; from the UK for a college project.</p>
+  </footer>
+  </body>
+  </html>
